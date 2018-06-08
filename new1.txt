@@ -1,0 +1,14 @@
+pe = function(e, t) {
+        return [].concat((0,o.default)(e.filter(function(e) {
+            return e.is_starting
+        })), (0, o.default)(t.map(function(t) {
+            return e.filter(function(e) {
+                return e.member.member_id === t
+            })[0]
+        }).map(function(e) {
+            return (0, r.default)({}, e, {
+                disableSelection: (0,
+                m.isInArray)(e.member.member_id, t)
+            })
+        })))
+    }
